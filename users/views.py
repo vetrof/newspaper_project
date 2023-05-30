@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
-def testView(request):
-    return HttpResponse('test ok')
+class IndexView(TemplateView):
+    template_name = 'home.html'

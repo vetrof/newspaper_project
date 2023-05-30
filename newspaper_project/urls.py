@@ -2,11 +2,11 @@
 from django.contrib import admin
 from django.urls import path
 
-from users.views import testView
+from users.views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', testView),
+    path('', IndexView.as_view()),
 ]
 
 
